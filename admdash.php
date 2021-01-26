@@ -40,10 +40,9 @@
             </div>
 
             <div class="dataform" ">
-	<div class=" form-data" id="contents" style=" box-shadow: 10px 10px lightgrey;">
-
-            </div>
+            <div class=" form-data" id="contents" style=" box-shadow: 10px 10px lightgrey;"></div>
         </div>
+    </div>
     </div>
     </div>
 

@@ -25,18 +25,18 @@ if (mysqli_query($con,$qry)==true)
 	{
 		
 		echo "<script>alert('Data saved');</script>";
-		header('refresh:0;url=http://localhost:8088/placement/studash.php?uname='.$un);
+		header('refresh:0;url=http://localhost/placement/studash.php?uname='.$un);
 	}		
 else
 {
 	
 	echo "<script>alert('could not save data');</script>";
-			header('refresh:0;url=http://localhost:8088/placement/studash.php?uname='.$un);
+			header('refresh:0;url=http://localhost/placement/studash.php?uname='.$un);
 }
 }
 else
 {
 	echo "<script>alert('fields cannot be left empty');</script>";
-			header('refresh:0;url=http://localhost:8088/placement/studash.php?uname='.$un);
+			header('refresh:0;url=http://localhost/placement/studash.php?uname='.$un);
 }
 }

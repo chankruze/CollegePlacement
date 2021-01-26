@@ -13,15 +13,15 @@
             session_start();
             $_SESSION['username'] = $un;
             if ($_POST['usertype'] == "S")
-                header('refresh:0;url=http://localhost:8088/placement/studash.php?uname=' . $un);
+                header('refresh:0;url=http://localhost/placement/studash.php?uname=' . $un);
             else
-                header('refresh:0;url=http://localhost:8088/placement/admdash.php?uname=' . $un);
+                header('refresh:0;url=http://localhost/placement/admdash.php?uname=' . $un);
         } else {
             echo "<script>alert('username or password incorrect');</script>";
             if ($_POST['usertype'] == "S")
-                header('refresh:0;url=http://localhost:8088/placement/stulogin.php');
+                header('refresh:0;url=http://localhost/placement/stulogin.php');
             else
-                header('refresh:0;url=http://localhost:8088/placement/adminlogin.php');
+                header('refresh:0;url=http://localhost/placement/adminlogin.php');
         }
     }
 

@@ -37,18 +37,18 @@ and !empty($_POST["salPack"]) and !empty($_POST["Loc"]) )
 			{
 				//echo $qry;
 				echo "<script>alert('Data saved');</script>";
-				header('refresh:0;url=http://localhost:8088/placement/admdash.php?uname='.$un);
+				header('refresh:0;url=http://localhost/placement/admdash.php?uname='.$un);
 			}		
 		else
 		{
 			//echo $qry;
 			echo "<script>alert('could not save data');</script>";
-			header('refresh:0;url=http://localhost:8088/placement/admdash.php?uname='.$un);
+			header('refresh:0;url=http://localhost/placement/admdash.php?uname='.$un);
 		}
 }
 else
 {
 	echo "<script>alert('fields cannot be left empty');</script>";
-	header('refresh:0;url=http://localhost:8088/placement/admdash.php?uname='.$un);
+	header('refresh:0;url=http://localhost/placement/admdash.php?uname='.$un);
 }
 }

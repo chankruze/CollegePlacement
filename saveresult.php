@@ -20,12 +20,12 @@ $con=mysqli_connect("localhost","root","","placementdb");
 			{
 				//echo $qry;
 				echo "<script>alert('Data saved');</script>";
-				header('refresh:0;url=http://localhost:8088/placement/admdash.php?uname='.$un);
+				header('refresh:0;url=http://localhost/placement/admdash.php?uname='.$un);
 			}		
 		else
 		{
 			//echo $qry;
 			echo "<script>alert('could not save data');</script>";
-			header('refresh:0;url=http://localhost:8088/placement/admdash.php?uname='.$un);
+			header('refresh:0;url=http://localhost/placement/admdash.php?uname='.$un);
 		}
 }

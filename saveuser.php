@@ -11,10 +11,10 @@ $qry="Insert into users (username,password,usertype) values ('$un','$pwd','$utyp
 	{
 		
 		echo "<script>alert('New User Created');</script>";
-		header('refresh:0;url=http://localhost:8088/placement/admdash.php');
+		header('refresh:0;url=http://localhost/placement/admdash.php');
 	}		
 	else
 	{
 		echo "<script>alert('could not update password');</script>";
-		header('refresh:0;url=http://localhost:8088/placement/admdash.php');
+		header('refresh:0;url=http://localhost/placement/admdash.php');
 	}
