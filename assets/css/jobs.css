@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+/* job container */
+
+.jobs-container {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  /* width: 60%;
+  height: 200px; */
+  color: #fff;
+  /* background: #2e2e2e; */
+  border-radius: 0.25rem;
+  margin: 0.5rem auto;
+  font-family: "Nunito Sans", sans-serif;
+  padding: 0.5rem;
+}
+
+/* job card */
+
+.job-card {
+  margin: 0.5rem;
+  background: #1d1d1d;
+  border-radius: 0.5rem;
+  color: #fff;
+  width: 1000px;
+}
+
+/******** header *********/
+
+.job-card .header {
+  display: flex;
+  /* align-items: center; */
+  background: #161616;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  align-items: stretch;
+}
+
+.job-card .header div {
+  display: flex;
+  align-items: center;
+}
+
+.job-card .header .post-id h2::before {
+  content: "#";
+}
+
+/* post id */
+
+.job-card .header .post-id {
+  /* background: rgb(0, 121, 90); */
+  background: #00644f;
+  padding: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  font-family: monospace;
+  color: rgb(180, 180, 180);
+}
+
+/* post title */
+
+.job-card .header .post-title {
+  padding: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  flex: 1;
+  font-family: "Recursive", sans-serif;
+  /* background: rgb(0, 134, 101); */
+  background: #005240;
+  color: rgb(255, 255, 255);
+}
+
+/******* body *******/
+
+.job-card .body {
+  padding: 0.5rem;
+  color: #999999;
+}
+
+/* company */
+
+.job-card .body .company {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  font-family: "Nunito Sans";
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+  color: #cecece;
+  font-size: 0.8rem;
+}
+
+.job-card .body .company i {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  color: #00a372;
+}
+
+/* location */
+
+.job-card .body .company .location {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  color: #acacac;
+  font-size: 0.9rem;
+}
+
+.job-card .body .company .location i {
+  margin-right: 0.25rem;
+  font-size: 1.1rem;
+  color: #00a372;
+}
+
+/* salary */
+
+.job-card .body .salary {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 0.7rem;
+  padding-bottom: 0.5rem;
+  font-family: "Nunito Sans";
+  color: hsl(0, 0%, 67%);
+}
+
+.job-card .body .salary i {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  color: #00a372;
+}
+
+/* .job-card .body .salary h2::before {
+  content: "₹";
+  font-weight: 300;
+}
+
+.job-card .body .salary h2::after {
+  content: "/m";
+  font-weight: 300;
+} */
+
+/* qualification */
+
+.job-card .body .qualification {
+  display: flex;
+  padding-bottom: 0.5rem;
+  align-items: center;
+  font-family: "Nunito Sans";
+  color: #acacac;
+  font-size: 0.8rem;
+}
+
+.job-card .body .qualification i {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  color: #00a372;
+}
+
+/* description */
+
+.job-card .body .description {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* other requirements */
+
+.job-card .body .other-requirements {
+  padding: 0.25rem 0;
+  font-family: "Nunito";
+  font-weight: 400;
+  color: #b4b4b4;
+}
+
+.job-card .body .other-requirements span {
+  margin-right: 0.25rem;
+  color: #00d47c;
+}
+
+/* interview date */
+
+/* .job-card .body .interview-date {
+  font-family: "Nunito";
+  font-weight: 400;
+  color: #b4b4b4;
+  padding: 0.25rem 0;
+}
+
+.job-card .body .interview-date span {
+  margin-right: 0.25rem;
+  color: #00d47c;
+} */
+
+/****** footer ******/
+
+.job-card .footer {
+  display: flex;
+  /* align-items: center; */
+  background: rgb(34, 34, 34);
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 0.5rem;
+  color: #b4b4b4;
+}
+
+.job-card .footer span {
+  margin-right: 0.25rem;
+  color: #b4b4b4;
+}
+
+.job-card .footer .post-date {
+  color: #00a372;
+}
+
+.job-card .footer .interview-date {
+  color: #a0a300;
+}
+
+.job-card .footer .last-date {
+  color: #e23500;
+}
+
+/****** No Job *********/
+
+.no-job {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+}
+
+.no-job img {
+  padding: 1rem;
+}
+
+.no-job h1 {
+  padding: 1rem 0;
+  font-family: "Recursive", sans-serif;
+  text-transform: capitalize;
+}

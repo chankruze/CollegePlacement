@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background: #272727;
+}
+
+.container.login {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-menu {
+  width: 100%;
+  background: #242424;
+  padding: 0.5rem;
+  color: #fff;
+  justify-self: flex-start;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.top-menu h1 {
+  /* font-size: 2rem; */
+  font-family: "Mate SC", serif;
+  letter-spacing: 3px;
+  flex: 1;
+}
+
+.top-menu h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.top-menu .login-menu {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: chartreuse; */
+}
+
+.top-menu .login-menu a,
+.top-menu .logout a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: rgb(0, 151, 68);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  color: #fff;
+  transition: all 300ms ease-in-out;
+  font-family: "Nunito Sans", sans-serif;
+  text-transform: capitalize;
+}
+
+/* admin login button */
+.top-menu .login-menu a.admin {
+  background: rgb(0, 109, 211);
+}
+
+/* admin login button */
+.top-menu .login-menu a.admin:hover {
+  background: rgb(0, 85, 165);
+}
+
+/* login button */
+.top-menu .login-menu a:hover {
+  background: rgb(0, 134, 60);
+}
+
+/* logout button */
+.top-menu .logout a {
+  background: #ff0000;
+}
+
+/* logout button */
+.top-menu .logout a:hover {
+  background: #cf0000;
+}
+
+/* n-th button */
+.top-menu .login-menu a:nth-child(even) {
+  margin-left: 0.5rem;
+}
+
+.top-menu .login-menu i,
+.top-menu .logout i {
+  font-size: 1.5rem;
+  padding-right: 0.5rem;
+}
+
+.top-menu .username {
+  padding: 0.25rem;
+  font-family: "Nunito", sans-serif;
+  margin-right: 1rem;
+}
+
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: yellow;
+}
+
+.loginContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginWrapper {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  min-width: 350px;
+  max-width: 400px;
+  width: 100%;
+  background: #363636;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.loginWrapper h1 {
+  font-size: 2rem;
+  align-self: center;
+  padding: 0.5rem 0 1rem 0;
+  font-family: "Russo One", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.loginWrapper .inputWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5rem;
+  /* background: red; */
+  margin: 0.5rem 0;
+}
+
+.loginWrapper .inputWrapper button {
+  align-self: center;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  border: 0;
+  color: #fff;
+  background: #005fe4;
+  transition: all 200ms ease-in-out;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.loginWrapper .inputWrapper button:hover {
+  background: #004fbe;
+}
+
+.loginWrapper label {
+  font-family: monospace;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.loginWrapper input {
+  padding: 0.5rem;
+  border: 0;
+  outline: 0;
+  border-bottom: #008d52;
+  width: 100%;
+  font-size: 1.1rem;
+  border-radius: 0.25rem;
+  font-family: "Recursive", sans-serif;
+}
+
+.content {
+  flex: 1;
+  background: #272727;
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.left-menu {
+  max-width: 280px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  background: #2e2e2e;
+}
+
+.left-menu ul li {
+  list-style: none;
+  text-decoration: none;
+  background: #004fbe;
+  color: #fff;
+  margin: 0.25rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-family: "Nunito Sans", sans-serif;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.left-menu ul li:hover {
+  background: #00419c;
+}
+
+.right-menu {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 1rem;
+}
+
+.btn {
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  background: rgb(0, 151, 68);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  color: #fff;
+  transition: all 200ms ease-in-out;
+  font-family: "Nunito Sans", sans-serif;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+
+.btn:hover {
+  background: rgb(0, 129, 58);
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/******** Scrollbar *********/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent !important;
+}
+
+/***********************************/
+/**     Rendered From & Table     **/
+/***********************************/
+
+table {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  color: #fff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: table;
+  table-layout: auto;
+  /* background-color: rgb(0, 115, 209); */
+}
+
+table tbody {
+  vertical-align: unset;
+  background: #2e2e2e;
+  border-radius: 0.5rem;
+}
+
+table td {
+  padding: 0.5rem;
+  vertical-align: middle;
+}
+
+table:not(.job_app_status) td,
+table:not(.applicants_table) td {
+  /* border: 1px dotted #3a3a3a; */
+  text-align: end;
+}
+
+/* Job Application Status Table */
+table.job_app_status td,
+table.applicants_table td {
+  text-align: center;
+  border: 1px dashed #000000;
+}
+
+table td input,
+table td select,
+table td textarea {
+  padding: 0.5rem;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-size: 1.1rem;
+  font-family: "Recursive", sans-serif;
+}
+
+table td select {
+  border-radius: 0.25rem;
+}
+
+table td input,
+table td textarea {
+  color: #fff;
+  border-bottom: 1px solid #008d52;
+  background: #383838;
+  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+}
+
+table td textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 150px;
+}
+
+table th {
+  background: #64008b;
+  padding: 0.5rem;
+  border: 0;
+  font-family: "Russo One", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.8px;
+}
+
+table th:first-child {
+  border-top-left-radius: 0.5rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 0.5rem;
+}
+
+table:not(.job_app_status) th,
+table:not(.applicants_table) th {
+  /* text-align: left; */
+  font-size: 1.8rem;
+}
+
+table.job_app_status th,
+table.applicants_table th {
+  font-size: 1rem;
+  vertical-align: middle;
+  text-align: center;
+  font-family: monospace;
+  letter-spacing: unset;
+}
+
+table th.submit {
+  text-align: end;
+  background: transparent;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+table.add_job tr > td + td,
+table.add_user tr > td + td {
+  width: 85%;
+}
+
+table.student_details tr > td + td {
+  width: 90%;
+}
+
+#job-selection-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  background: rgb(43, 43, 43);
+  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom: 1px solid #000000;
+}
+
+#job-selection-wrapper h3 {
+  font-family: "Recursive", sans-serif;
+  padding-right: 0.5rem;
+  color: #fff;
+}
+
+#job-selection-wrapper select {
+  border: 0;
+  outline: 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  font-family: "Recursive", sans-serif;
+}
+
+table.applicants_table th:first-child {
+  border-top-left-radius: 0px;
+}
+
+table.applicants_table th:last-child {
+  border-top-right-radius: 0px;
+}
