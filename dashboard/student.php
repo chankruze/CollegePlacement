@@ -23,13 +23,16 @@
     <div class="content">
         <div class="left-menu">
             <ul>
-                <li id="stuDetails">Add Your Details</li>
+                <li id="stuDetails">Add/Update Details</li>
                 <li id="ApplyJob">Apply for a Job</li>
                 <li id="CheckRes">Check Interview Result</li>
                 <li id="ChangePwd">Change password</li>
             </ul>
         </div>
         <div class="right-menu" id="render">
+            <div class='empty'>"
+                <img src='../assets/vectors/undraw_graduation.svg' alt='No actions' />
+            </div>
         </div>
     </div>
 </div>

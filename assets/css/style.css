@@ -407,8 +407,25 @@ table.applicants_table th {
 table th.submit {
   text-align: end;
   background: transparent;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
+  /* background: rebeccapurple; */
+  position: relative;
+}
+
+table th.submit span {
+  position: absolute;
+  font-family: "Nunito";
+  letter-spacing: 0px;
+  font-size: 1rem;
+  color: #ffffff;
+  text-transform: lowercase;
+  font-weight: 400;
+  font-style: italic;
+  left: 0;
+  margin: 1rem;
 }
 
 table.add_job tr > td + td,
@@ -416,7 +433,8 @@ table.add_user tr > td + td {
   width: 85%;
 }
 
-table.student_details tr > td + td {
+table.student_details tr > td + td,
+table.apply_job tr > td + td {
   width: 90%;
 }
 
@@ -452,4 +470,41 @@ table.applicants_table th:first-child {
 
 table.applicants_table th:last-child {
   border-top-right-radius: 0px;
+}
+
+/* check result */
+
+/****** No Applications *********/
+
+.no-result,
+.empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+}
+
+.no-result img,
+.empty img {
+  padding: 1rem;
+  width: 40%;
+  height: 40%;
+}
+
+.empty.admin img {
+  width: 60%;
+  height: 60%;
+}
+
+.no-result h1 {
+  padding: 1rem 0;
+  font-family: "Recursive", sans-serif;
+  text-transform: capitalize;
+  color: #fff;
 }

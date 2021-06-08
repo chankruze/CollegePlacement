@@ -29,6 +29,9 @@
             </ul>
         </div>
         <div class="right-menu" id="render">
+            <div class='empty admin'>"
+                <img src='../assets/vectors/undraw_admin.svg' alt='No actions' />
+            </div>
         </div>
     </div>
 </div>

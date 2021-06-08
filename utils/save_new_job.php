@@ -1,3 +1,8 @@
+<head>
+	<link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.css">
+	<link rel="stylesheet" href="../assets/css/utils.css">
+</head>
+
 <?php
 if (isset($_POST['submit'])) {
 
@@ -43,8 +48,9 @@ if (isset($_POST['submit'])) {
 
 		if (mysqli_query($connection, $query) == true) {
 			// echo $query;
-			echo "<script>alert('Data saved');</script>";
-			header('refresh:0;url=../dashboard/admin.php');
+			echo '<h1 class="query-status"><i class="far fa-check-circle"></i>Job saved...</h1>';
+			echo '<p class="redirecting">redirecting...</p>';
+			header('refresh:3;url=../dashboard/admin.php');
 		} else {
 			// echo $query;
 			echo "<script>alert('could not save data');</script>";

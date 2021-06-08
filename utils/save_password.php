@@ -1,3 +1,8 @@
+<head>
+	<link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.css">
+	<link rel="stylesheet" href="../assets/css/utils.css">
+</head>
+
 <?php
 $connection = mysqli_connect("localhost", "root", "", "placementdb");
 
@@ -15,8 +20,9 @@ if ($new_pass != $confirm_new_pass) {
 	$query = "update users set upass='$new_pass' where utype='$user_type' and uname='$user_name' and upass='$old_pass'";
 
 	if (mysqli_query($connection, $query) == true) {
-		echo "<script>alert('password updated');</script>";
-		header('refresh:0;url=../dashboard/' . $user_type . '.php');
+		echo '<h1 class="query-status"><i class="far fa-check-circle"></i>Password changed</h1>';
+		echo '<p class="redirecting">redirecting...</p>';
+		header('refresh:3;url=../dashboard/' . $user_type . '.php');
 	} else {
 		echo $qry;
 		echo "<script>alert('could not update password');</script>";

@@ -1,4 +1,4 @@
-<form method="post" action="../utils/save_result.php">
+<form method="post" action="../utils/save_shortlisted_students.php">
     <table class="applicants_table">
         <th style="width: 10%;">User ID</th>
         <th style="width: 10%;">Student ID</th>

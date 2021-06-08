@@ -1,9 +1,9 @@
-<form method="post" action="../utils/save_job_application.php" style="align-self: center;">
-    <table class="apply-job">
+<form method="post" action="../utils/save_job_application.php">
+    <table class="apply_job">
         <th colspan="2"> Apply for a Job</th>
         <tr>
             <td>
-                <div class="labl">Avaiable Jobs</div>
+                <div class="labl">Select A Job</div>
             </td>
             <td>
                 <?php

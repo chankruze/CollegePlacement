@@ -1,21 +1,13 @@
-<table class="job_app_status">
-    <tr>
-        <th>Job Title</th>
-        <th>Company</th>
-        <th>Interview Date</th>
-        <th>Qualified</th>
-        <th>Status</th>
-    </tr>
-    <?php
-    $connection = mysqli_connect("localhost", "root", "", "placementdb");
+<?php
+$connection = mysqli_connect("localhost", "root", "", "placementdb");
 
-    # get session info
-    session_start();
-    $uname = $_SESSION['username'];
-    $uid = $_SESSION['userid'];
+# get session info
+session_start();
+$uname = $_SESSION['username'];
+$uid = $_SESSION['userid'];
 
-    # find job applied for
-    $query = "select job.job_title, job.company, job.inter_date, app.qualified, app.status 
+# find job applied for
+$query = "select job.job_title, job.company, job.inter_date, app.qualified, app.status 
     from 
     job_openings job, job_applications app 
     where 
@@ -23,18 +15,23 @@
     and app.uname='$uname' 
     and app.job_id=job.job_id";
 
-    // echo $query;
-    # exec query
-    $res = mysqli_query($connection, $query);
+// echo $query;
+# exec query
+$res = mysqli_query($connection, $query);
 
-    // $i = 1;
+// student has already applied for jobs
+if (mysqli_num_rows($res)) {
+
+    echo "<table class='job_app_status'>";
+    echo "<tr>";
+    echo "<th>Job Title</th>";
+    echo "<th>Company</th>";
+    echo "<th>Interview Date</th>";
+    echo "<th>Qualified</th>";
+    echo "<th>Status</th>";
+    echo "</tr>";
+
     while ($row = mysqli_fetch_array($res)) {
-        // if ($i % 2 == 0) {
-        //     echo "<tr bgcolor='#B7F7F2'><td>";
-        // } else {
-        //     echo "<tr bgcolor='#6BF5F1'><td>";
-        // }
-        // $i++;
         echo "<td>";
         echo $row["job_title"];
         echo "</td>";
@@ -47,11 +44,8 @@
         echo "<td>";
         if ($row["qualified"] == 1)
             echo 'Yes';
-        elseif ($row["qualified"] == 3) {
-            if ($row["status"] == 1)
-                echo 'Not Reviewed Yet';
-            else
-                echo 'TBD';
+        elseif ($row["qualified"] == 3 and $row["status"] == 1) {
+            echo 'TBD';
         } else
             echo 'No';
         echo "</td>";
@@ -63,6 +57,11 @@
         echo "</td>";
         echo "</tr>";
     }
-
-    ?>
+} else {
+    echo "<div class='no-result'>";
+    echo "<img src='../assets/vectors/undraw_no_data.svg' alt='No Applications;('/>";
+    echo "<h1>You've not applied for any job😟</h1>";
+    echo "</div>";
+}
+?>
 </table>
