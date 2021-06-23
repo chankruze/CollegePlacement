@@ -1,3 +1,4 @@
+<!-- auth: password verification -->
 <head>
     <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.css">
     <link rel="stylesheet" href="../assets/css/utils.css">

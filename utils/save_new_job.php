@@ -9,11 +9,10 @@ if (isset($_POST['submit'])) {
 	$connection = mysqli_connect("localhost", "root", "", "placementdb");
 
 	if (
-		!empty($_POST["JobName"]) and !empty($_POST["JobDesc"])
-		and !empty($_POST["Company"]) and !empty($_POST["PostDate"])
-		and !empty($_POST["Interdate"]) and !empty($_POST["strm"])
-		and !empty($_POST["Qual"]) and !empty($_POST["salPack"])
-		and !empty($_POST["Loc"])
+		!empty($_POST["JobName"]) and !empty($_POST["Company"])
+		and !empty($_POST["PostDate"]) and !empty($_POST["Interdate"])
+		and !empty($_POST["strm"]) and !empty($_POST["Qual"])
+		and !empty($_POST["salPack"]) and !empty($_POST["Loc"])
 	) {
 		$job_title = $_POST['JobName'];
 		$job_desc = $_POST["JobDesc"];
@@ -48,7 +47,7 @@ if (isset($_POST['submit'])) {
 
 		if (mysqli_query($connection, $query) == true) {
 			// echo $query;
-			echo '<h1 class="query-status"><i class="far fa-check-circle"></i>Job saved...</h1>';
+			echo '<h1 class="query-status"><i class="far fa-check-circle"></i>Job Added Successfully</h1>';
 			echo '<p class="redirecting">redirecting...</p>';
 			header('refresh:3;url=../dashboard/admin.php');
 		} else {

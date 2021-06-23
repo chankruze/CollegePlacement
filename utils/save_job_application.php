@@ -29,7 +29,7 @@ if (mysqli_num_rows($res)) {
 	$query = "insert into job_applications (uid, stu_id, uname, job_id) values ('$uid', '$stu_id', '$uname', '$job_id')";
 
 	if (mysqli_query($connection, $query) == true) {
-		echo '<h1 class="query-status"><i class="far fa-check-circle"></i>successfully applied...</h1>';
+		echo '<h1 class="query-status"><i class="far fa-check-circle"></i>Application Successful</h1>';
 		echo '<p class="redirecting">redirecting...</p>';
 		header('refresh:3;url=../dashboard/student.php');
 	} else {

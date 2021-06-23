@@ -17,7 +17,7 @@ $query = "select * from students where uid='$uid' and uname='$uname'";
 $res = mysqli_query($connection, $query);
 
 // current date
-$date = date_create(date("Y-d-m"));
+$date = date_create_from_format("Y-d-m", date("Y-d-m"));
 // min dob (18+)
 date_sub($date, date_interval_create_from_date_string('18 years'));
 $date = (string)date_format($date, 'Y-m-d');

@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
 		('$uid', '$stu_roll', '$uname', '$stu_name', '$stu_fath_name', '$stu_dob', '$stu_mob', '$stu_mail', '$stu_qualification', '$stu_stream', '$stu_marks', '$stu_interest');";
 
 		if (mysqli_query($connection, $query) == true) {
-			echo '<h1 class="query-status"><i class="far fa-check-circle"></i>data saved...</h1>';
+			echo '<h1 class="query-status"><i class="far fa-check-circle"></i>Data Saved</h1>';
 			echo '<p class="redirecting">redirecting...</p>';
 			// echo "<script>alert('Data saved');</script>";
 			header('refresh:3;url=../dashboard/student.php');

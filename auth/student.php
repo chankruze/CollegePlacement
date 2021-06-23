@@ -1,3 +1,4 @@
+<!-- login: student -->
 <html>
 
 <head>
@@ -6,31 +7,36 @@
 </head>
 
 <body>
+    <!--
+    method: post
+    end point: verify.php
+    -->
     <form method="post" action="./verify.php">
+        <!-- container -->
         <div class="container login">
+            <!-- top bar -->
             <div class="top-menu">
                 <h1><a href="/placement">College Placement System</a></h1>
                 <div class="login-menu">
                     <a href="../"><i class="fas fa-home"></i>Home</a>
                 </div>
             </div>
+            <!-- login container -->
             <div class="loginContainer">
                 <div class="loginWrapper">
                     <h1>Student Login</h1>
                     <div class="inputWrapper">
-                        <!-- <label for="username">Username</label> -->
-                        <input type="text" name="uname" id="username" placeholder="username">
+                        <input type="text" name="uname" id="username" placeholder="username" />
                     </div>
                     <div class="inputWrapper">
-                        <!-- <label for="password">Password</label> -->
-                        <input type="password" name="pwd" id="password" placeholder="password">
+                        <input type="password" name="pwd" id="password" placeholder="password" />
                     </div>
                     <div class="inputWrapper">
                         <button type="submit">
                             Login
                         </button>
                     </div>
-                    <input type="hidden" name="utype" value="student">
+                    <input type="hidden" name="utype" value="student" />
                 </div>
             </div>
         </div>

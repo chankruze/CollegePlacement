@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
         // echo $query;
 
         if (mysqli_query($connection, $query) == true) {
-            echo '<h1 class="query-status"><i class="far fa-check-circle"></i>data updated...</h1>';
+            echo '<h1 class="query-status"><i class="far fa-check-circle"></i>Data Updated</h1>';
             echo '<p class="redirecting">redirecting...</p>';
             // echo "<script>alert('Data saved');</script>";
             header('refresh:5;url=../dashboard/student.php');

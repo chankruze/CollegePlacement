@@ -3,7 +3,7 @@
         <th colspan="2">Add a New Job for Placement</th>
         <tr>
             <td>
-                <div class="labl">Job Title</div>
+                <div class="labl">Job Title*</div>
             </td>
             <td><input type="text" name="JobName" placeholder="Junior Developer etc."></td>
         </tr>
@@ -15,31 +15,31 @@
         </tr>
         <tr>
             <td>
-                <div class="labl">Company Name</div>
+                <div class="labl">Company Name*</div>
             </td>
             <td><input type="text" name="Company" placeholder="Sticker Mule etc."></td>
         </tr>
         <tr>
             <td>
-                <div class="labl">Post Date</div>
+                <div class="labl">Post Date*</div>
             </td>
             <td><input type="date" name="PostDate" value=<?php echo date('d-m-y'); ?>> </td>
         </tr>
         <tr>
             <td>
-                <div class="labl">Job Expiry Date</div>
+                <div class="labl">Job Expiry Date*</div>
             </td>
             <td><input type="date" name="expDate" value=<?php echo date('d-m-y'); ?>> </td>
         </tr>
         <tr>
             <td>
-                <div class="labl">Interview Date</div>
+                <div class="labl">Interview Date*</div>
             </td>
             <td><input type="date" name="Interdate"> </td>
         </tr>
         <tr>
             <td>
-                <div class="labl">Stream</div>
+                <div class="labl">Stream*</div>
             </td>
             <td> <select name="strm">
                     <option value="Computer Science and Engineering" selected>Computer Science and Engineering</option>
@@ -55,7 +55,7 @@
         </tr>
         <tr>
             <td>
-                <div class="labl">Qualification</div>
+                <div class="labl">Qualification*</div>
             </td>
             <td><select name="Qual">
                     <option value="Graduation">Graduation</option>
@@ -76,13 +76,13 @@
         </tr>
         <tr>
             <td>
-                <div class="labl">Salary Package</div>
+                <div class="labl">Salary Package*</div>
             </td>
             <td><input type="text" name="salPack" width="300px"></td>
         </tr>
         <tr>
             <td>
-                <div class="labl">Location</div>
+                <div class="labl">Location*</div>
             </td>
             <td><input type="text" name="Loc"> </td>
         </tr>
