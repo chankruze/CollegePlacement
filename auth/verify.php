@@ -1,4 +1,5 @@
 <!-- auth: password verification -->
+
 <head>
     <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.css">
     <link rel="stylesheet" href="../assets/css/utils.css">
@@ -34,8 +35,13 @@ if ($retval) {
                 header('refresh:0;url=./' . $_POST['utype'] . '.php');
             }
         } else {
-            echo '<script>alert("\"' . $uname . '\" doesn\'t belongs to \"' . $_POST['utype'] . '\".\nclicking OK will redirect you to correct login page.");</script>';
-            header('refresh:0;url=./' . $row['utype'] . '.php');
+            if (count($row) !== 0) {
+                echo "<script>alert('user ($uname) don\'t exist. Create an account first.');</script>";
+                header('refresh:0;url=./' . $_POST['utype'] . '.php');
+            } else {
+                echo '<script>alert("\"' . $uname . '\" doesn\'t belongs to \"' . $_POST['utype'] . '\".\nclicking OK will redirect you to correct login page.");</script>';
+                header('refresh:0;url=./' . $row['utype'] . '.php');
+            }
         }
     }
 } else {
