@@ -9,7 +9,10 @@
 <body>
     <div class="container">
         <div class="top-menu">
-            <h1>College Placement System</h1>
+            <h1>
+                <img src="./assets/images/bose_logo.png" class="bose-logo" />
+                College Placement System
+            </h1>
             <div class="login-menu">
                 <a href="./auth/student.php"><i class="fas fa-user-graduate"></i>Student</a>
                 <a href="./auth/admin.php" class="admin"><i class="fas fa-user-shield"></i>Admin</a>

@@ -42,6 +42,14 @@
   font-family: "Mate SC", serif;
   letter-spacing: 3px;
   flex: 1;
+  display: flex;
+}
+
+.top-menu h1 img.bose-logo {
+  max-width: 3rem;
+  max-height: 3rem;
+  margin-right: 0.5rem;
+  filter: invert(1);
 }
 
 .top-menu h1 a {

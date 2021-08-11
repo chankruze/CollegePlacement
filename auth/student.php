@@ -16,7 +16,10 @@
         <div class="container login">
             <!-- top bar -->
             <div class="top-menu">
-                <h1><a href="/placement">College Placement System</a></h1>
+                <h1>
+                    <img src="../assets/images/bose_logo.png" class="bose-logo" />
+                    <a href="/placement">College Placement System</a>
+                </h1>
                 <div class="login-menu">
                     <a href="../"><i class="fas fa-home"></i>Home</a>
                 </div>

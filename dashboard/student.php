@@ -5,7 +5,10 @@
 
 <div class="container">
     <div class="top-menu">
-        <h1>College Placement System</h1>
+        <h1>
+            <img src="../assets/images/bose_logo.png" class="bose-logo" />
+            <a href="/placement">College Placement System</a>
+        </h1>
         <h3 class="username">
             <?php session_start();
             $uname = $_SESSION["username"];
